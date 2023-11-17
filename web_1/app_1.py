@@ -1,9 +1,9 @@
 import streamlit as st
 
-height = float(st.number_input("Boyunuzu daxil edin (metr ile): "))
-mass = int(st.number_input("Kutlenizi daxil edin (kq ile): "))
+height = float(st.number_input("Boyunuzu daxil edin (metr ilə: "))
+mass = int(st.number_input("Kutlenizi daxil edin (kq ilə): "))
 age = int(st.number_input("Yashinizi daxil edin: "))
-sex = st.text_input("Cinsini daxil edin")
+sex = st.text_input("Cinsinizi daxil edin (kişi üçün m, qadın üçün f):")
 
 def vki():
   result = mass/(height*height)
