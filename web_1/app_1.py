@@ -3,13 +3,25 @@ import streamlit as st
 height = float(st.number_input("Boyunuzu daxil edin (metr ilə: "))
 mass = int(st.number_input("Kutlenizi daxil edin (kq ilə): "))
 age = int(st.number_input("Yashinizi daxil edin: "))
-sex = st.text_input("Cinsinizi daxil edin (kişi üçün m, qadın üçün f):")
+sex = st.radio("Cinsinizi daxil edin:", ["Kişi", "Qadın"])
+result=None
 
 def vki():
-  result = mass/(height*height)
+  try:
+    if height == 0:
+      return None
+    result = mass / (height * height)
+  except ZeroDivisionError:
+    result = None
   return result
 
+
 def funk():
+  if vki() is None:
+    st.text("Height cannot be zero.")
+  else:
+    st.text('Sizin VKI-niz: {}'.format(vki()))
+
   if vki() < 18.5:
     st.text('''
   Zəif
@@ -52,33 +64,68 @@ def funk():
 
 
 
-st.text(f'Sizin VKI-niz: {vki()}')
-
-
-if 18<=age<=24:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5 , 24.9, 18.5*(height*height), 24.9*(height*height)))
-
-elif 25<=age<=34:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5 , 24.9, 18.5*(height*height), 24.9*(height*height)))
-
-elif 35<=age<=44:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5 , 24.9, 18.5*(height*height), 24.9*(height*height)))
-
-elif 45<=age<=54:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5 , 24.9, 18.5*(height*height), 24.9*(height*height)))
-
-elif 55<=age<=64:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5 , 24.9, 18.5*(height*height), 24.9*(height*height)))
-
-elif age>=65:
-    funk()
-    st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(22 , 27, 22*(height*height), 27*(height*height)))
-
+if st.button("Hesabla"):
+    
+    if 18 <= age <= 24:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+    elif 25 <= age <= 34:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+    elif 35 <= age <= 44:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+    elif 45 <= age <= 54:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+    elif 55 <= age <= 64:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+    elif age >= 65:
+        if height == 0:
+            st.text("Height cannot be zero.")
+        else:
+            result = vki()
+            if result is None:
+                st.text("Height cannot be zero.")
+            else:
+                funk()
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(22, 27, 22 * (height * height), 27 * (height * height)))
 
 #datalari input ele. vki hesabla. her vki araligina gore neticeni ve mesleheti, yasa ve cinsiyyete gore ideal cekini print ele.
 #yas araliqlarina gore vki verilir. bu vki lere gore dusturdan mass tap. minimum maksimum
