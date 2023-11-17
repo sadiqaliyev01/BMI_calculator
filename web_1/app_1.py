@@ -75,7 +75,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
     elif 25 <= age <= 34:
         if height == 0:
             st.text("Height cannot be zero.")
@@ -85,7 +85,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
     elif 35 <= age <= 44:
         if height == 0:
             st.text("Height cannot be zero.")
@@ -95,7 +95,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
     elif 45 <= age <= 54:
         if height == 0:
             st.text("Height cannot be zero.")
@@ -105,7 +105,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
     elif 55 <= age <= 64:
         if height == 0:
             st.text("Height cannot be zero.")
@@ -115,7 +115,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(18.5, 24.9, 18.5 * (height * height), 24.9 * (height * height)))
     elif age >= 65:
         if height == 0:
             st.text("Height cannot be zero.")
@@ -125,7 +125,7 @@ if st.button("Hesabla"):
                 st.text("Height cannot be zero.")
             else:
                 funk()
-                st.text('Sizin yaşınıza görə ideal VKI {} - {} araliginda olmalidir. Sizin ideal kutleniz {} - {} kq arasinda olmalidir'.format(22, 27, 22 * (height * height), 27 * (height * height)))
+                st.text('Sizin yaşınıza görə ideal VKI {} - {} aralığında olmalıdır. Sizin boyunuza görə ideal kütləniz {} - {} kq arasında olmalıdır'.format(22, 27, 22 * (height * height), 27 * (height * height)))
 
 #datalari input ele. vki hesabla. her vki araligina gore neticeni ve mesleheti, yasa ve cinsiyyete gore ideal cekini print ele.
 #yas araliqlarina gore vki verilir. bu vki lere gore dusturdan mass tap. minimum maksimum
